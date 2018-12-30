@@ -61,6 +61,7 @@ class Company(models.Model):
         ('boxed', 'Boxed'),
         ('clean', 'Clean'),
         ('standard', 'Standard'),
+        ('local', 'Local'),
     ], string='Document Template')
 
     _sql_constraints = [
@@ -81,8 +82,8 @@ class Company(models.Model):
         return {
             'street'     : partner.street,
             'street2'    : partner.street2,
-            'city'       : partner.city,
             'zip'        : partner.zip,
+            'city'       : partner.city,
             'state_id'   : partner.state_id,
             'country_id' : partner.country_id,
         }
